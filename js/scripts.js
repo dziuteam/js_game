@@ -32,6 +32,7 @@ function setGameElements() {
       break;
     case 'ended':
         newGameBtn.innerText = 'Jeszcze raz';
+      break;
     case 'notStarted':
     default:
         newGameElem.style.display = 'block';
@@ -77,6 +78,7 @@ function playerPick(playerPick) {
     
     playerPickElem.innerHTML = playerPick;
     computerPickElem.innerHTML = computerPick;
+    setGamePoints();
 }
 
 function checkRoundWinner(playerPick, computerPick) {
@@ -101,9 +103,9 @@ function checkRoundWinner(playerPick, computerPick) {
         computerResultElem.innerHTML = "Wygrana!";
         computer.score++;
     }
-
+	setGamePoints();
 }
-console.log(checkRoundWinner);
+
 
 function playerPick(playerPick) {
     var computerPick = getComputerPick();
@@ -117,6 +119,12 @@ function playerPick(playerPick) {
 function setGamePoints() {
     playerPointsElem.innerHTML = player.score;
     computerPointsElem.innerHTML = computer.score;
+}
+
+
+if (player.score == 3 || computer.score == 3) {
+	gameState='ended';
+	setGameElements();
 }
 
 
