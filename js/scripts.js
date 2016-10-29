@@ -1,13 +1,13 @@
-var newGameBtn = document.getElementById('js-newGameButton');
-newGameBtn.addEventListener('click', newGame);
+var newGameBtn = document.getElementById('js-newGameButton'); //nowa zmienna wyszukuje po id
+newGameBtn.addEventListener('click', newGame);	//czeka na klikniecie i uruchamia newGeme
 
 var pickRock = document.getElementById('js-playerPick_rock'),
      pickPaper = document.getElementById('js-playerPick_paper'),
-     pickScissors = document.getElementById('js-playerPick_scissors');
+     pickScissors = document.getElementById('js-playerPick_scissors'); 
 
 pickRock.addEventListener('click', function() { playerPick('rock') });
 pickPaper.addEventListener('click', function() { playerPick('paper') });
-pickScissors.addEventListener('click', function() { playerPick('scissors') });
+pickScissors.addEventListener('click', function() { playerPick('scissors') }); //jak wyzej nowe zmienne "czekaja" na klikniecie odpowiedniego buttona i uruchamiaja funkcje playerPick
 
 var gameState = 'notStarted',  //started // ended
     player = {
@@ -53,7 +53,7 @@ function newGame() {
     setGameElements();
 
     playerNameElem.innerHTML = player.name;
-    // setGamePoints(); // ta funkcja jeszcze nie powstała
+    setGamePoints();
   }
 
 }
@@ -64,19 +64,21 @@ function playerPick(playerPick) {
 
 function getComputerPick() {
     var possiblePicks = ['rock', 'paper', 'scissors'];
-    return possiblePicks[Math.floor(Math.random()*3)];
+    return possiblePicks[Math.floor(Math.random()*3)]; //zwraza losowo z tablicy possiblePicks pozycje 0 lub 1 lub 2
 }
 
 var playerPickElem = document.getElementById('js-playerPick'),
     computerPickElem = document.getElementById('js-computerPick'),
     playerResultElem = document.getElementById('js-playerResult'),
     computerResultElem = document.getElementById('js-computerResult');
+
 function playerPick(playerPick) {
     var computerPick = getComputerPick();
     
     playerPickElem.innerHTML = playerPick;
     computerPickElem.innerHTML = computerPick;
 }
+
 function checkRoundWinner(playerPick, computerPick) {
   playerResultElem.innerHTML = computerResultElem.innerHTML = '';
 
@@ -101,6 +103,7 @@ function checkRoundWinner(playerPick, computerPick) {
     }
 
 }
+console.log(checkRoundWinner);
 
 function playerPick(playerPick) {
     var computerPick = getComputerPick();
@@ -115,6 +118,7 @@ function setGamePoints() {
     playerPointsElem.innerHTML = player.score;
     computerPointsElem.innerHTML = computer.score;
 }
+
 
 
 

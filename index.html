@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
 	<meta charset="UTF-8">
 	<title>Gra</title>
@@ -9,7 +9,8 @@
 </head>
 <body>
 	<div class="container">
-		<h3 class="text-center">Witaj w grze
+		<h3 class="text-center welcomesign">Witaj w grze</h3>
+    <h3 class="text-center">
     		<span class="label label-default">Kamień</span>
     		<span class="label label-info">Papier</span>
     		<span class="label label-danger">Nożyce</span>
@@ -17,25 +18,25 @@
 	</div>
 	<div id="js-newGameElement" class="container">
 		<div class="row text-center">
-    		<button  id="js-newGameButton" class="btn btn-default">Nowa Gra
+    		<button  id="js-newGameButton" class="btn btn-lg btn-success">Nowa Gra
     		</button>
   		</div>
 	</div>
 	<div id="js-playerPickElement" class="container">
   		<div class="row text-center">
-    		<button id="js-playerPick_rock" class="btn">
+    		<button id="js-playerPick_rock" class="btn btn-lg">
       			<span class="badge">
         			<i class="fa fa-hand-rock-o" aria-hidden="true"></i>
       			</span>
     			Kamień
     		</button>
-    		<button id="js-playerPick_paper"  class="btn">
+    		<button id="js-playerPick_paper"  class="btn btn-lg">
       			<span class="badge">
       				<i class="fa fa-hand-paper-o" aria-hidden="true"></i>
       			</span>
       			Papier
     		</button>
-    		<button id="js-playerPick_scissors"  class="btn">
+    		<button id="js-playerPick_scissors"  class="btn btn-lg">
       			<span class="badge">
       				<i class="fa fa-hand-scissors-o" aria-hidden="true"></i>
       			</span>
@@ -43,7 +44,7 @@
     		</button>
   		</div>
 	</div>
-	<div id="js-resultsTableElement" class="container">
+	<div id="js-resultsTableElement" class="container restab">
   		<div class="row">
     		<div class="col-xs-5 text-center">
       			<span id="js-playerPoints" class="badge">0

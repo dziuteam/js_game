@@ -1,0 +1,20 @@
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 0; }
+
+.label {
+  font-size: 40px; }
+
+.welcomesign {
+  font-size: 35px;
+  padding: 0 0 40px 0;
+  color: #5d5e60; }
+
+.restab {
+  font-size: 25px;
+  color: green;
+  font-family: "Oswald", sans-serif; }
+
+/*# sourceMappingURL=style.css.map */
