@@ -5,9 +5,9 @@ var pickRock = document.getElementById('js-playerPick_rock'),
      pickPaper = document.getElementById('js-playerPick_paper'),
      pickScissors = document.getElementById('js-playerPick_scissors'); 
 
-pickRock.addEventListener('click', function() { playerPick('rock') });
-pickPaper.addEventListener('click', function() { playerPick('paper') });
-pickScissors.addEventListener('click', function() { playerPick('scissors') }); //jak wyzej nowe zmienne "czekaja" na klikniecie odpowiedniego buttona i uruchamiaja funkcje playerPick
+pickRock.addEventListener('click', function() { playerPick('kamień') });
+pickPaper.addEventListener('click', function() { playerPick('papier') });
+pickScissors.addEventListener('click', function() { playerPick('nożyce') }); //jak wyzej nowe zmienne "czekaja" na klikniecie odpowiedniego buttona i uruchamiaja funkcje playerPick
 
 var gameState = 'notStarted',  //started // ended
     player = {
@@ -68,7 +68,7 @@ function playerPick(playerPick) {
 }
 
 function getComputerPick() {
-    var possiblePicks = ['rock', 'paper', 'scissors'];
+    var possiblePicks = ['kamień', 'papier', 'nożyce'];
     return possiblePicks[Math.floor(Math.random()*3)]; //zwraza losowo z tablicy possiblePicks pozycje 0 lub 1 lub 2
 }
 
@@ -93,9 +93,9 @@ function checkRoundWinner(playerPick, computerPick) {
     if (playerPick == computerPick) {
         winnerIs = 'noone'; // remis
     } else if (
-        (computerPick == 'rock' &&  playerPick == 'scissors') ||
-        (computerPick == 'scissors' &&  playerPick == 'paper') ||
-        (computerPick == 'paper' &&  playerPick == 'rock') ) {
+        (computerPick == 'kamień' &&  playerPick == 'nożyce') ||
+        (computerPick == 'nożyce' &&  playerPick == 'papier') ||
+        (computerPick == 'papier' &&  playerPick == 'kamień') ) {
         
         winnerIs = 'computer';
     }
